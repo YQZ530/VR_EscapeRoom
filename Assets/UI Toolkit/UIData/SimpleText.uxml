@@ -1,0 +1,5 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement style="flex-grow: 0; width: auto; height: auto;">
+        <engine:TextField placeholder-text="filler text" name="TextField" select-all-on-mouse-up="false" select-all-on-focus="false" select-word-by-double-click="false" select-line-by-triple-click="false" emoji-fallback-support="false" hide-mobile-input="true" max-length="5" style="flex-shrink: 1; width: 162px;" />
+    </engine:VisualElement>
+</engine:UXML>

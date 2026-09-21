@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ef6e825254ce8924d8e26b2f26b712c2
+ComputeShaderImporter:
+  externalObjects: {}
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 247453
+  packageName: Volumetric Heatmap
+  packageVersion: 1.2.0
+  assetPath: Assets/VolumetricHeatmap/Scripts/GaussWeightComputeShader.compute
+  uploadId: 654990

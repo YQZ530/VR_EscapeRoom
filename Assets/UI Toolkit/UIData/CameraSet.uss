@@ -1,0 +1,5 @@
+#CameraGroup .unity-button-group {
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-wrap: nowrap;
+}

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 90d89b84bad6edd4081a400d69136bf7
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 247453
+  packageName: Volumetric Heatmap
+  packageVersion: 1.2.0
+  assetPath: Assets/VolumetricHeatmap/Scenes/VolumetricHeatmapExampleScene.unity
+  uploadId: 654990

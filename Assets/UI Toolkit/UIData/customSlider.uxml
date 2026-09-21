@@ -1,0 +1,8 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:Template name="SliderBar" src="project://database/Assets/UIData/SliderBar.uxml?fileID=9197481963319205126&amp;guid=1c75443214371c546a037d127fb2441b&amp;type=3#SliderBar" />
+    <Style src="project://database/Assets/UIData/Slider3.uss?fileID=7433441132597879392&amp;guid=c21387e3bc3f35a439dd99d690319329&amp;type=3#Slider3" />
+    <engine:VisualElement name="MSlider" style="flex-grow: 1; flex-direction: column; height: 64px; flex-shrink: 0; width: auto; min-width: 350px; max-width: 600px; align-self: flex-start; align-items: flex-start; justify-content: center;">
+        <engine:Instance template="SliderBar" name="SliderBar" />
+    </engine:VisualElement>
+    <engine:VisualElement style="flex-grow: 1;" />
+</engine:UXML>

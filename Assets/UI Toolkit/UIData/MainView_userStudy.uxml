@@ -1,0 +1,154 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Template name="CameraSet" src="project://database/Assets/UIData/CameraSet.uxml?fileID=9197481963319205126&amp;guid=c83e402e456725e489e3acb62d05f8e2&amp;type=3#CameraSet" />
+    <ui:Template name="Replayer" src="project://database/Assets/UIData/Replayer.uxml?fileID=9197481963319205126&amp;guid=a93b24f3d33e7804b8096af9bdfa39d4&amp;type=3#Replayer" />
+    <ui:Template name="Slider3" src="project://database/Assets/UIData/Slider3.uxml?fileID=9197481963319205126&amp;guid=f90f0a91c1b822c489205da45551909b&amp;type=3#Slider3" />
+    <ui:TabView name="MainTabView" tabindex="0" style="background-color: rgba(0, 0, 0, 0); justify-content: space-between; align-items: center; width: 100%; align-self: flex-start; flex-direction: column; font-size: 20px; -unity-text-align: upper-center; height: 100%;">
+        <ui:Tab label="Exploration" name="T1" closeable="false" class="tab-content T1" style="height: 90px; width: 100%; background-color: rgb(200, 200, 200); background-image: none; align-items: auto; flex-shrink: 0; flex-direction: row; justify-content: flex-start; align-self: auto;">
+            <ui:Instance template="CameraSet" name="TemplateContainer" style="top: -750px; right: -7px; flex-shrink: 0; width: 216px; height: 210px; justify-content: flex-start; align-items: stretch; position: absolute; display: flex;">
+                <AttributeOverrides element-name="MoveButt" icon-image="project://database/Assets/Samples/XR%20Interaction%20Toolkit/2.5.2/XR%20Device%20Simulator/UI/HeadDevice/MoveRotateTool.png?fileID=2800000&amp;guid=139237a044d8e4255b40bb472c842087&amp;type=3#MoveRotateTool" />
+                <AttributeOverrides element-name="SelectButt" icon-image="project://database/Assets/resources/Texture/selection.PNG?fileID=2800000&amp;guid=1e765c7d2b4b14a4f870f33229bb74cd&amp;type=3#selection" />
+            </ui:Instance>
+            <ui:VisualElement name="ToolBar" style="position: relative; bottom: -5px; height: 158px; width: 1920px; left: auto; flex-direction: row; background-color: rgb(200, 200, 200); flex-shrink: 1; flex-grow: 0; justify-content: flex-start; flex-wrap: wrap; align-items: flex-start; align-self: auto; display: flex;">
+                <ui:Instance template="Replayer" name="Replayer">
+                    <AttributeOverrides element-name="PauseButt" emoji-fallback-support="false" />
+                    <AttributeOverrides element-name="ToggleButtonGroup" tabindex="1" />
+                </ui:Instance>
+                <ui:ToggleButtonGroup label="Visualization:" is-multiple-selection="true" allow-empty-selection="true" name="GameplayStatusToggleGroup" style="margin-right: 18px; position: absolute; bottom: 81px; right: 116px; top: auto; left: auto; align-items: center; align-self: stretch;">
+                    <ui:Button text="WalkPath&#10;Heatmap" name="HeatmapButt" />
+                    <ui:Button text="WalkPath&#10;Line" name="WalkPathButt" />
+                    <ui:Button text="Rotation" name="RotationButt" />
+                    <ui:Button text="EyeGaze" name="EyeGazeButt" />
+                </ui:ToggleButtonGroup>
+                <ui:IntegerField label="Main Player To Follow" value="0" name="MainPlayerField" style="bottom: -93px;" />
+                <ui:Toggle label="Transparent Other" name="HighlightToggle" style="bottom: -97px;" />
+                <ui:FloatField label="Transparency" value="0.3" name="TransparencyField" style="bottom: -93px;" />
+            </ui:VisualElement>
+        </ui:Tab>
+        <ui:Tab label="Grouping-Poses" name="T2" class="tab-content" style="align-items: auto; flex-direction: row; width: 100%; height: 137%; background-color: rgb(200, 200, 200); flex-wrap: nowrap; flex-grow: 1; justify-content: flex-start; align-self: center; bottom: 39px; flex-shrink: 0; min-width: 1800px; top: auto;">
+            <ui:TabView name="CustomTabView" class="CustomTab" style="flex-direction: column; flex-shrink: 0; width: 1900px; min-width: 1800px; min-height: auto; height: 137px; bottom: auto;">
+                <ui:Tab label="Grouping Setting" name="T2S1" style="flex-direction: row; flex-wrap: wrap; top: auto; bottom: 35px; font-size: 20px;">
+                    <ui:VisualElement name="ToolBar" style="height: auto; width: 100%; flex-direction: row; align-items: center; align-self: auto; flex-wrap: wrap; justify-content: flex-start; min-height: 51px;">
+                        <ui:ToggleButtonGroup label="Clustering Feature" name="ClusterFeatureGroup" is-multiple-selection="true" focusable="true" allow-empty-selection="true">
+                            <ui:Button text="WalkPath" name="WalkPath" />
+                            <ui:Button text="Gameplay&#10;Duration" name="GameplayDur" />
+                            <ui:Button text="#Coins&#10;Collected" name="numCoins" />
+                            <ui:Button text="#Bomb&#10;Hit" name="BombHit" enable-rich-text="true" emoji-fallback-support="false" />
+                            <ui:Button text="#Obstacles&#10;Hit" name="NumObstaclesHit" enable-rich-text="true" emoji-fallback-support="false" />
+                            <ui:Button text="#Treasure&#10;Collected" name="TreasureCollected" enable-rich-text="true" emoji-fallback-support="false" />
+                        </ui:ToggleButtonGroup>
+                        <ui:EnumField label="Distance Metric" type="DCXR.Clustering.PoseClusterMetric, Assembly-CSharp" name="DistanceMetricEnum" class="enum-dropdown" style="width: 323px; height: 42px; overflow: hidden; flex-wrap: wrap; flex-direction: column;" />
+                        <ui:EnumField label="Algorithm" type="DCXR.Clustering.PoseClusterAlgor, Assembly-CSharp" name="AlgorEnum" class="enum-dropdown" style="width: 336px; height: auto; align-items: center; align-self: auto; flex-grow: 0; flex-wrap: wrap;" />
+                        <ui:IntegerField label="# Group" value="3" name="NumCluster" select-word-by-double-click="false" select-line-by-triple-click="false" emoji-fallback-support="false" style="flex-wrap: wrap; width: 213px; flex-direction: row;" />
+                        <ui:VisualElement name="ClusterButtVE">
+                            <ui:Button text="Cluster" name="Cluster" style="width: 121px; flex-shrink: 0; flex-grow: 0; flex-direction: row; align-items: center; align-self: auto; justify-content: flex-start;" />
+                        </ui:VisualElement>
+                        <ui:IntegerField label="Start Chunk" value="0" name="StartChunk" />
+                        <ui:IntegerField label="EndChunk" value="1" name="EndChunk" />
+                    </ui:VisualElement>
+                </ui:Tab>
+                <ui:Tab label="Grouping Result" name="T2S2" style="flex-shrink: 0; width: auto; flex-direction: column; bottom: 35px; left: auto;">
+                    <engine:VisualElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" name="TextContainer" template="CameraSet" style="top: -849px; right: 0; flex-shrink: 0; width: 860px; height: 800px; justify-content: flex-start; align-items: stretch; position: absolute; visibility: visible; display: flex; max-height: 800px; max-width: 860px; flex-wrap: nowrap; flex-direction: column;">
+                        <engine:Foldout text="Foldout" name="Foldout" style="display: flex;">
+                            <engine:TextField label="Text Field" value="Player0::#Coin= 7 Player1::#Coin= 6 Player2::#Coin= 4 Player6::#Coin= 7 Player7::#Coin= 6 Player9::#Coin= 8 Player10::#Coin= 7 Player11::#Coin= 7 Player12::#Coin= 6 Player14::#Coin= 7 Player15::#Coin= 6" vertical-scroller-visibility="AlwaysVisible" style="flex-wrap: nowrap; flex-direction: column;" />
+                        </engine:Foldout>
+                    </engine:VisualElement>
+                    <ui:VisualElement name="AfterCluster" style="flex-grow: 0; flex-direction: row; min-height: 32px; flex-shrink: 0; flex-wrap: nowrap;">
+                        <ui:ToggleButtonGroup label="Grouping Result:" name="ClusterButtGroup" is-multiple-selection="true" style="max-height: none; min-height: 57px; margin-top: 0; margin-bottom: 0; max-width: none;" />
+                        <ui:VisualElement name="Replayer" style="flex-grow: 0; height: 100px; width: 1177px; align-items: center; flex-direction: row; justify-content: space-around; align-self: auto; flex-shrink: 1; position: relative; left: auto; top: auto; right: auto; bottom: -9px; margin-top: 0; flex-wrap: nowrap;">
+                            <ui:ToggleButtonGroup name="PlayPauseTGroup" style="align-items: stretch; justify-content: flex-start; width: 162px; flex-wrap: nowrap; left: auto; position: relative; height: 70px; right: auto; top: auto; bottom: auto;">
+                                <ui:Button icon-image="project://database/Assets/Multiple%20Data%20Visualization%20Resources/Textures/Data%20Visualization06/Icon_Arrow01.png?fileID=2800000&amp;guid=f317fe738a58e2746a9194feeebce076&amp;type=3#Icon_Arrow01" name="PlayButt" style="width: 80px;" />
+                                <ui:Button icon-image="project://database/Assets/resources/Texture/Icon_Pause.png?fileID=2800000&amp;guid=215247b161ddbe8458b18f672bf171fc&amp;type=3#Icon_Pause" name="PauseButt" style="flex-direction: row; width: 80px;" />
+                            </ui:ToggleButtonGroup>
+                            <ui:ToggleButtonGroup label="Anchor Mode" name="AnchorMode" style="width: auto; left: -5px; display: none; visibility: hidden;">
+                                <ui:Button text="Level" />
+                                <ui:Button text="User" />
+                            </ui:ToggleButtonGroup>
+                            <ui:Instance template="Slider3" name="ReplayerSlider" style="justify-content: center; align-items: stretch; left: -12px;">
+                                <AttributeOverrides element-name="SliderBar" label="SliderBar" value="1" high-value="100" />
+                            </ui:Instance>
+                            <ui:SliderInt label="Speed" value="42" high-value="20" low-value="1" name="SpeedMultiSlider" style="height: 76px; width: 230px; align-items: center; left: -25px; margin-left: 0; margin-top: 0; margin-right: 0;" />
+                        </ui:VisualElement>
+                        <ui:ToggleButtonGroup label="Visualizatiohn:" is-multiple-selection="true" allow-empty-selection="true" name="VisToggleGroup" style="margin-right: 18px; position: absolute; bottom: 25px; right: -6px; top: auto; left: auto;">
+                            <ui:Button text="WalkPath" name="WalkPathButt" />
+                            <ui:Button text="Rotation" name="RotationButt" />
+                            <ui:Button text="Text" name="ResultTextButt" />
+                        </ui:ToggleButtonGroup>
+                    </ui:VisualElement>
+                </ui:Tab>
+                <ui:Tab label="Graph" name="T2S3" view-data-key="Graph" style="flex-shrink: 0; width: 1900px; flex-direction: column; bottom: 23px; left: auto; height: 110px; right: auto; justify-content: space-between;">
+                    <ui:VisualElement name="GraphSettingVE" style="flex-grow: 0; flex-direction: row; min-height: auto; top: 0; align-self: center; position: absolute; align-items: stretch; height: 110px; width: 1900px; justify-content: space-between; flex-wrap: wrap; bottom: 0; left: 0;">
+                        <ui:ToggleButtonGroup label="Features To Show" name="FeatureGroupY" is-multiple-selection="true" style="width: 620px;" />
+                        <ui:RadioButtonGroup label="GraphType" name="GraphType" choices="BarGraph,LineGraph,PieChart,BoxPlot,Histogram" style="flex-direction: row; flex-wrap: wrap; align-self: center; align-items: center; width: auto; height: auto; visibility: visible; display: flex; overflow: visible; margin-bottom: 0; margin-top: 0; margin-left: 2px; margin-right: 2px; left: -131px;" />
+                        <ui:VisualElement name="GraphFilter" style="flex-grow: 1; flex-direction: row; left: -72px;">
+                            <ui:EnumField label="Attribute" type="DCXR.Graph.GroupFeature, Assembly-CSharp" name="Attribute" include-obsolete-values="false" style="max-width: 300px; width: 244px; flex-direction: column;" />
+                            <ui:EnumField label="Comparator" type="DCXR.Graph.Comparator, Assembly-CSharp" name="Comparator" value="Equal" style="width: 193px; flex-direction: column;" />
+                            <ui:IntegerField label="Value" value="0" select-word-by-double-click="false" select-line-by-triple-click="false" emoji-fallback-support="false" name="Value" style="flex-direction: column; width: 89px; align-items: center; justify-content: center; align-self: flex-start; flex-grow: 0;" />
+                        </ui:VisualElement>
+                        <ui:Button text="Plot" name="ShowGraphButt" style="font-size: 40px; flex-shrink: 1; left: -83px;" />
+                    </ui:VisualElement>
+                </ui:Tab>
+            </ui:TabView>
+        </ui:Tab>
+        <ui:Tab label="Grouping-EyeGaze" name="T2b" style="width: 1926px; height: 100%; align-items: auto; align-self: center; background-color: rgb(200, 200, 200);">
+            <engine:VisualElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" name="gazeClusterResultTextContainer" template="CameraSet" style="top: -834px; right: 0; flex-shrink: 0; width: 860px; height: 797px; justify-content: flex-start; align-items: stretch; position: absolute; visibility: visible; display: flex;">
+                <engine:TextField placeholder-text="sfgsdfgsdasdfad" name="ClusterResultText" select-all-on-mouse-up="false" select-all-on-focus="false" select-line-by-triple-click="false" select-word-by-double-click="false" emoji-fallback-support="false" vertical-scroller-visibility="AlwaysVisible" multiline="true" max-length="-1" readonly="true" style="visibility: hidden; overflow: visible; right: auto; height: 460px; width: auto; padding-right: 9px; font-size: 20px;" />
+            </engine:VisualElement>
+            <ui:TabView class="T2bTabview" style="width: 1900px; height: 164px; flex-direction: column;">
+                <ui:Tab label="Cluster Setting" name="T2bS1" style="background-color: rgba(0, 0, 0, 0);">
+                    <ui:VisualElement style="flex-grow: 0; width: auto; flex-direction: row; flex-shrink: 0; justify-content: flex-start; align-self: flex-start; flex-wrap: wrap; align-items: stretch; top: auto; height: 116px; min-height: 52px;">
+                        <ui:IntegerField label="Start Chunk " value="0" name="StartChunk" />
+                        <ui:IntegerField label="End Chunk" value="1" name="EndChunk" />
+                        <ui:IntegerField label="MinFixation" value="10" name="Minfixation" />
+                        <ui:ToggleButtonGroup label="Eye Gaze Clustering Feature" name="ClusterFeatureGroup" is-multiple-selection="true" allow-empty-selection="true" style="margin-top: 2px;">
+                            <ui:Button text="Fixation" name="Fixation" />
+                            <ui:Button text="Sum  Duration" name="sumDur" />
+                            <ui:Button text="Std Duration" name="stdDur" />
+                            <ui:Button text="avgDur" name="avgDur" />
+                            <ui:Button text="Num Fixation" name="numFixation" enable-rich-text="true" emoji-fallback-support="false" />
+                        </ui:ToggleButtonGroup>
+                        <ui:IntegerField label="Number Cluster" value="3" name="NumCluster" select-all-on-mouse-up="false" select-all-on-focus="false" select-line-by-triple-click="false" emoji-fallback-support="false" select-word-by-double-click="false" style="width: 300px;" />
+                        <ui:EnumField label="Distance Metric" type="DCXR.Clustering.EyeGazeClusterMetric, Assembly-CSharp" include-obsolete-values="false" name="DistMetric" style="margin-top: 6px;" />
+                        <ui:EnumField label="Algorithmn" type="DCXR.Clustering.EyeGazeClusterAlgor, Assembly-CSharp" name="Algorithm" />
+                        <ui:Button text="Cluster" name="Cluster" />
+                    </ui:VisualElement>
+                </ui:Tab>
+                <ui:Tab label="Visualize Result" name="T2bS2" style="flex-direction: column;">
+                    <ui:VisualElement style="flex-grow: 1; flex-direction: row; font-size: 25px; align-self: auto; align-items: stretch;">
+                        <ui:Label text="Total Group = -1" name="TotalGroupLabel" select-word-by-double-click="false" select-line-by-triple-click="false" emoji-fallback-support="false" enable-rich-text="false" style="font-size: 25px; margin-top: 6px;" />
+                        <ui:IntegerField label="Target Group" value="-2" name="TargetGroup" style="font-size: 25px;" />
+                        <ui:IntegerField label="Target Player" value="-1" name="TargetPlayer" style="font-size: 25px;" />
+                        <ui:ToggleButtonGroup label="Visualization Deatils:" is-multiple-selection="true" allow-empty-selection="true" name="visOption" style="font-size: 25px;">
+                            <ui:Button text="Line" />
+                            <ui:Button text="Points" />
+                            <ui:Button text="Text" />
+                            <ui:Button text="Heatmap" />
+                        </ui:ToggleButtonGroup>
+                        <ui:Button text="Show" name="ShowCluster" />
+                        <ui:FloatField label="Heatmap Max Cutoff" value="0.4" name="HeatmapMaxCut" />
+                    </ui:VisualElement>
+                </ui:Tab>
+            </ui:TabView>
+        </ui:Tab>
+        <ui:Tab label="Explanation" name="T3" style="flex-shrink: 0; flex-direction: row; min-width: 1924px; height: 100%; background-color: rgb(188, 188, 188); flex-wrap: nowrap; align-items: center; align-self: flex-start; top: 0;">
+            <engine:VisualElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" name="TemplateContainer" template="CameraSet" style="top: -831px; right: -1592px; width: 90px; height: 256px; position: absolute; left: auto;">
+                <engine:ToggleButtonGroup name="CameraGroup" allow-empty-selection="false" is-multiple-selection="false" style="width: auto; height: auto; min-width: auto; min-height: auto; flex-direction: column; flex-wrap: wrap;">
+                    <engine:Button name="nearFOV" select-word-by-double-click="false" select-line-by-triple-click="false" selectable="false" emoji-fallback-support="false" text="Near&#10;First&#10;Person" style="width: 80px; height: 80px; align-items: stretch;" />
+                    <engine:Button text="VR" name="VRView" selectable="false" select-word-by-double-click="false" select-line-by-triple-click="false" emoji-fallback-support="false" icon-image="project://database/Assets/Samples/XR%20Interaction%20Toolkit/2.5.2/XR%20Device%20Simulator/UI/HeadDevice/HMD.png?fileID=2800000&amp;guid=4eb43321e418951499417cda6141b31a&amp;type=3#HMD" style="-unity-font-style: bold; font-size: 25px; flex-direction: column; width: 80px; height: 80px;" />
+                    <engine:Button text="Top&#10;Down" name="TopDown" emoji-fallback-support="false" select-word-by-double-click="false" select-line-by-triple-click="false" display-tooltip-when-elided="false" style="width: 80px; height: 80px; font-size: 25px;" />
+                </engine:ToggleButtonGroup>
+            </engine:VisualElement>
+            <ui:VisualElement name="Container" style="flex-grow: 1; flex-shrink: 1; flex-direction: row; height: 100px; align-items: stretch; flex-wrap: nowrap; width: auto; justify-content: flex-start;">
+                <ui:VisualElement style="flex-grow: 1; justify-content: center; min-width: 330px; flex-direction: row; align-items: center;">
+                    <ui:IntegerField label="Main Player ID" value="-1" name="mainPlayerField" style="margin-right: 0; margin-left: 0; font-size: 20px; flex-wrap: wrap; flex-direction: column;" />
+                    <ui:IntegerField label="Other Player ID" value="-1" name="otherPlayerField" style="flex-wrap: wrap; flex-direction: column;" />
+                </ui:VisualElement>
+                <ui:Instance template="Replayer" name="Replayer" />
+                <ui:ToggleButtonGroup label="Status:" is-multiple-selection="true" allow-empty-selection="true" name="GameplayStatusToggleGroup" style="margin-right: 18px; position: absolute; bottom: 25px; right: -1608px; top: auto; left: auto; flex-direction: row; flex-wrap: wrap;">
+                    <ui:Button text="WalkPath" name="WalkPathButt" />
+                    <ui:Button text="GazePath" name="EyeGazeButt" />
+                    <ui:Button text="GazeBall" name="EyeGazeButt" />
+                </ui:ToggleButtonGroup>
+            </ui:VisualElement>
+        </ui:Tab>
+    </ui:TabView>
+</ui:UXML>

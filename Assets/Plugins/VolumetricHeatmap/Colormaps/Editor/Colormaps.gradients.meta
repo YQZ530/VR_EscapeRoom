@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d1ad381031ea4f946868ca9d4fca0689
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 247453
+  packageName: Volumetric Heatmap
+  packageVersion: 1.2.0
+  assetPath: Assets/VolumetricHeatmap/Colormaps/Editor/Colormaps.gradients
+  uploadId: 654990

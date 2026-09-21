@@ -1,0 +1,122 @@
+#node-border {
+    color: rgb(255, 255, 255);
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left-color: rgba(108, 108, 108, 255);
+    border-right-color: rgba(108, 108, 108, 255);
+    border-top-color: rgba(108, 108, 108, 255);
+    border-bottom-color: rgba(108, 108, 108, 255);
+    background-color: rgba(154, 154, 154, 255);
+}
+
+#title-label {
+    background-color: rgba(91, 88, 88, 255);
+    -unity-font-style: bold;
+    font-size: 14px;
+}
+
+#content {
+    background-color: rgba(147, 147, 147, 255);
+}
+
+#selection-border {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-left-color: rgba(141, 230, 255, 255);
+    border-right-color: rgba(141, 230, 255, 255);
+    border-top-color: rgba(141, 230, 255, 255);
+    border-bottom-color: rgba(141, 230, 255, 255);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+}
+
+:hover > #selection-border {
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left-color: rgba(0, 192, 255, 255);
+    border-right-color: rgba(0, 192, 255, 255);
+    border-top-color: rgba(0, 192, 255, 255);
+    border-bottom-color: rgba(0, 192, 255, 255);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+:selected > #selection-border {
+    border-left-color: rgba(0, 192, 255, 255);
+    border-right-color: rgba(0, 192, 255, 255);
+    border-top-color: rgba(0, 192, 255, 255);
+    border-bottom-color: rgba(0, 192, 255, 255);
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+:hover:selected > #selection-border {
+    border-left-color: rgba(0, 192, 255, 255);
+    border-right-color: rgba(0, 192, 255, 255);
+    border-top-color: rgba(0, 192, 255, 255);
+    border-bottom-color: rgba(0, 192, 255, 255);
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.EventNode #title-label {
+    background-color: rgba(236, 97, 97, 255);
+    max-width: 200px;
+    min-width: auto;
+    width: auto;
+}
+
+.ClusterNode #title-label {
+    background-color: rgba(114, 113, 233, 255);
+}
+
+.GameplayNode #title-label {
+    background-color: rgba(96, 176, 233, 255);
+}
+
+#top {
+    flex-direction: row;
+    justify-content: space-between;
+}

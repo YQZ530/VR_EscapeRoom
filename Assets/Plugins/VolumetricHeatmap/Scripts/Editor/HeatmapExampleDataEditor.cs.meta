@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 9b7ae22369e47f9488978a30622ecbc6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 247453
+  packageName: Volumetric Heatmap
+  packageVersion: 1.2.0
+  assetPath: Assets/VolumetricHeatmap/Scripts/Editor/HeatmapExampleDataEditor.cs
+  uploadId: 654990

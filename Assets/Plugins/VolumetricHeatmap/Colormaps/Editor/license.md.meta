@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f26ddee8a2b64804da3d171644bfd780
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 247453
+  packageName: Volumetric Heatmap
+  packageVersion: 1.2.0
+  assetPath: Assets/VolumetricHeatmap/Colormaps/Editor/license.md
+  uploadId: 654990

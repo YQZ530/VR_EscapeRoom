@@ -1,0 +1,37 @@
+.CustomTab #unity-tab-view__header-container {
+    flex-direction: row;
+    width: 615px;
+    min-width: auto;
+    flex-wrap: nowrap;
+    height: 59px;
+    left: 0;
+    top: -13px;
+    visibility: visible;
+    overflow: visible;
+}
+
+.CustomTab #unity-tab-view__header-container #unity-tab__header-label {
+    -unity-font-style: normal;
+    font-size: 25px;
+}
+
+.CustomTab #unity-tab-view__header-container #unity-tab__header-underline {
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+.CustomTab #unity-tab-view__header-container #unity-tab__header {
+    background-image: none;
+    background-color: rgb(255, 255, 255);
+    width: auto;
+    font-size: 14px;
+    min-height: 40px;
+    border-right-width: 2px;
+    border-right-color: rgb(200, 200, 200);
+    border-left-color: rgba(200, 200, 200, 0);
+    border-left-width: 2px;
+}
+
+.T2bTabview #unity-tab-view__header-container #unity-tab__header-label {
+    -unity-font-style: normal;
+    font-size: 23;
+}

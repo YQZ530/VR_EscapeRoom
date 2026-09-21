@@ -1,0 +1,14 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:SliderInt label="SliderBar" value="-9" high-value="100" name="SliderBar" show-input-field="true" inverted="false" direction="Horizontal" style="width: auto; flex-direction: row; flex-grow: 1; flex-shrink: 1; height: 71px; left: auto;" />
+    <engine:VisualElement style="flex-grow: 0; flex-direction: row; flex-wrap: nowrap;">
+        <engine:Label text="SliderBar" select-word-by-double-click="false" display-tooltip-when-elided="false" select-line-by-triple-click="false" emoji-fallback-support="false" enable-rich-text="false" style="min-width: 150px;" />
+        <engine:VisualElement style="flex-grow: 1; height: 100%; flex-direction: row;">
+            <engine:VisualElement name="unity-drag-container" class="unity-base-slider__drag-container" style="flex-grow: 1;">
+                <engine:VisualElement name="unity-tracker" class="unity-base-slider__tracker" style="flex-grow: 0; border-top-width: 1px; border-left-width: 1px; border-right-width: 1px; height: 6px; background-color: rgb(108, 108, 108); top: 50%; left: 0; right: 0; margin-top: -3px;" />
+                <engine:VisualElement name="unity-dragger-border" class="unity-base-slider__dragger-border" style="flex-grow: 0;" />
+                <engine:VisualElement name="unity-dragger" class="unity-base-slider__dragger" style="flex-grow: 0; top: 50%; width: 8px; height: 24px; left: 0; position: absolute; background-color: rgb(255, 255, 255); border-top-width: 1px; border-left-width: 1px; border-bottom-width: 1px; border-right-width: 1px; border-left-color: rgba(0, 0, 0, 0.22); border-right-color: rgba(0, 0, 0, 0.22); border-top-color: rgba(0, 0, 0, 0.22); border-bottom-color: rgba(0, 0, 0, 0.22); padding-top: 0; margin-top: -12px;" />
+            </engine:VisualElement>
+            <engine:IntegerField label="Integer Field" value="42" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

@@ -1,0 +1,7 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UIData/Slider3.uss?fileID=7433441132597879392&amp;guid=c21387e3bc3f35a439dd99d690319329&amp;type=3#Slider3" />
+    <engine:VisualElement name="MSlider" style="flex-grow: 1; flex-direction: column; height: 72px; flex-shrink: 1; width: 549px; min-width: 350px; max-width: 600px; align-self: flex-start; align-items: flex-start; justify-content: center;">
+        <engine:SliderInt label="SliderBar" value="-9" high-value="100" name="SliderBar" show-input-field="true" inverted="false" direction="Horizontal" style="width: auto; flex-direction: row-reverse; flex-grow: 1; flex-shrink: 0; height: 39px; left: 479px;" />
+        <engine:ToggleButtonGroup label="Toggle Button Group" name="ProgressbarButtGroup" class="ProgressbarButtGroup" style="justify-content: space-around; flex-direction: row; flex-wrap: wrap; align-self: auto; align-items: center; flex-grow: 0; top: 8px; overflow: visible; flex-shrink: 1; height: 123px; width: 541px;" />
+    </engine:VisualElement>
+</engine:UXML>

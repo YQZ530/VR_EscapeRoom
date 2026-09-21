@@ -1,0 +1,6 @@
+Tired of using Python scripts in Unity? UPython 3 Pro may be able to achieve what you need.
+UPython 3 Pro is a tool out of the box, as long as you have configured the Python environment.
+Not compatible with UPython 2 (Pro).
+UPython 3 Pro redesigns the underlying logic of Unity component and Python server. A highly integrated and optimized design makes it easier for developers to use or extend remote Python calls.
+Just start one Python server, and it will provide all the functionality.
+Unity and Python Server could run on the same PC or run on different PCs that the PCs should stay within the same local network (e.g., connect to the same wifi)

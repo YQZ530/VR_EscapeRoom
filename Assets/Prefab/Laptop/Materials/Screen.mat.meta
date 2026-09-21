@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a8305c3f581f0a0479efcbc822cd51a2
+timeCreated: 1479583286
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 76532
+  packageName: Laptop
+  packageVersion: 1.0
+  assetPath: Assets/Laptop/Materials/Screen.mat
+  uploadId: 152275

@@ -1,0 +1,17 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Template name="Slider3" src="project://database/Assets/UIData/Slider3.uxml?fileID=9197481963319205126&amp;guid=f90f0a91c1b822c489205da45551909b&amp;type=3#Slider3" />
+    <ui:VisualElement name="Replayer" style="flex-grow: 0; height: 100px; width: auto; align-items: center; flex-direction: row; justify-content: space-around; align-self: auto; flex-shrink: 1; position: absolute; left: auto; top: auto; right: auto; bottom: auto;">
+        <ui:ToggleButtonGroup name="PlayPauseTGroup" tabindex="0" style="align-items: stretch; justify-content: flex-start; width: 162px; flex-wrap: nowrap; left: auto; position: relative; height: 70px; right: auto; top: auto; bottom: auto;">
+            <ui:Button icon-image="project://database/Assets/Multiple%20Data%20Visualization%20Resources/Textures/Data%20Visualization06/Icon_Arrow01.png?fileID=2800000&amp;guid=f317fe738a58e2746a9194feeebce076&amp;type=3#Icon_Arrow01" name="PlayButt" select-word-by-double-click="false" select-line-by-triple-click="false" emoji-fallback-support="false" style="width: 80px;" />
+            <ui:Button icon-image="project://database/Assets/resources/Texture/Icon_Pause.png?fileID=2800000&amp;guid=215247b161ddbe8458b18f672bf171fc&amp;type=3#Icon_Pause" name="PauseButt" select-word-by-double-click="false" select-line-by-triple-click="false" style="flex-direction: row; width: 80px;" />
+        </ui:ToggleButtonGroup>
+        <ui:ToggleButtonGroup label="Anchor Mode" name="AnchorMode" style="width: auto; left: -5px;">
+            <ui:Button text="Level" />
+            <ui:Button text="Event" />
+        </ui:ToggleButtonGroup>
+        <ui:Instance template="Slider3" name="ReplayerSlider" style="justify-content: center; align-items: stretch; left: -12px;">
+            <AttributeOverrides element-name="SliderBar" label="SliderBar" value="1" high-value="100" />
+        </ui:Instance>
+        <ui:SliderInt label="Speed" value="1" high-value="5" low-value="1" name="SpeedMultiSlider" style="height: 76px; width: 230px; align-items: center; left: -25px;" />
+    </ui:VisualElement>
+</ui:UXML>

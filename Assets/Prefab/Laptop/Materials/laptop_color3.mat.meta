@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8791d8ee1be3a6c4e8614cc98710f7ce
+timeCreated: 1479583123
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 76532
+  packageName: Laptop
+  packageVersion: 1.0
+  assetPath: Assets/Laptop/Materials/laptop_color3.mat
+  uploadId: 152275

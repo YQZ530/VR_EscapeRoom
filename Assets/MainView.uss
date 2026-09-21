@@ -1,0 +1,115 @@
+.unity-tab__header {
+    background-color: rgb(229, 223, 223);
+    -unity-font-style: bold;
+    font-size: 40px;
+}
+
+.unity-tab__header:checked {
+    background-color: rgb(173, 166, 166);
+}
+
+.tab-content {
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.unity-tab__header-underline {
+    opacity: 0;
+}
+
+.unity-tab-view_hearder-container {
+    font-size: 20px;
+}
+
+.CustomTab #unity-tab-view__header-container {
+    flex-direction: row;
+    width: 615px;
+    min-width: auto;
+    flex-wrap: nowrap;
+    height: 59px;
+    left: 0;
+    top: -13px;
+    visibility: visible;
+    overflow: visible;
+}
+
+.CustomTab #unity-tab-view__header-container #unity-tab__header-label {
+    -unity-font-style: normal;
+    font-size: 29px;
+}
+
+.CustomTab #unity-tab-view__header-container #unity-tab__header-underline {
+    border-bottom-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.CustomTab #unity-tab-view__header-container #unity-tab__header {
+    width: auto;
+    font-size: 14px;
+    min-height: 40px;
+    border-right-width: 2px;
+    border-right-color: rgb(200, 200, 200);
+    border-left-color: rgba(200, 200, 200, 0);
+    border-left-width: 2px;
+    bottom: 34px;
+}
+
+.T2bTabview #unity-tab-view__header-container #unity-tab__header-label {
+    -unity-font-style: normal;
+    font-size: 27px;
+}
+
+#AnchorMode .unity-label {
+    text: "Anchor Mode";
+    width: 100px;
+    font-size: 18px;
+}
+
+#SpeedMultiSlider .unity-label {
+    min-width: 50px;
+    margin-left: 10px;
+}
+
+.ClusterTBG {
+    min-width: 80px;
+}
+
+#GraphType #unity-radio-button-group__container {
+    flex-shrink: 1;
+    max-height: 120px;
+    flex-wrap: wrap;
+}
+
+#CameraGroup .unity-button-group {
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-wrap: nowrap;
+}
+
+#SpeedMultiSlider #unity-drag-container {
+    width: 135px;
+    min-width: 51px;
+}
+
+#FeatureGroupY .unity-button-group {
+    max-width: 600px;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#NumCluster .unity-label {
+    width: 150px;
+    flex-wrap: wrap;
+    max-width: none;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+    font-size: 23px;
+    -unity-font-style: normal;
+}
+
+#ClusterButtGroup .unity-button-group {
+    flex-wrap: wrap;
+    max-width: 391px;
+}
+

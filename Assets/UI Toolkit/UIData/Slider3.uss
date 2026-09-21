@@ -1,0 +1,28 @@
+#SliderBar .unity-base-slider__label {
+    opacity: 0;
+    overflow: visible;
+    display: none;
+}
+
+#ProgressbarButtGroup .unity-label {
+    opacity: 0;
+    overflow: visible;
+    display: none;
+}
+
+.ProgressbarButt {
+    flex-shrink: 1;
+    min-width: 50px;
+}
+
+#ProgressbarButtGroup #unity-toggle-button-group__container {
+    max-width: 541px;
+    flex-shrink: 0;
+    flex-direction: row;
+    min-width: auto;
+    width: auto;
+    flex-wrap: wrap;
+    overflow: visible;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
